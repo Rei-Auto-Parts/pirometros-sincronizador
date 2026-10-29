@@ -60,6 +60,7 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 log = logging.getLogger("sincronizador")
+logging.getLogger("pytds").setLevel(logging.WARNING)  # esconde o log técnico do driver
 
 
 def carregar_env(caminho):
